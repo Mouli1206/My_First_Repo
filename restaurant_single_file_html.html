@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LaMesa · Modern Bistro</title>
+  <meta name="description" content="LaMesa - Modern bistro serving seasonal dishes, crafted cocktails and warm hospitality." />
+  <style>
+    :root{--bg:#fff;--text:#0b1220;--muted:#475569;--accent:#c62828;--accent-2:#ffb4a2;--card:#ffffff;--border:#e6eef6}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased}
+    a{color:inherit}
+    .container{max-width:1100px;margin:0 auto;padding:0 1rem}
+
+    header{border-bottom:1px solid var(--border);position:sticky;top:0;background:linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.6));backdrop-filter:blur(6px);z-index:40}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:0.85rem 0}
+    .brand{display:flex;gap:.6rem;align-items:center;font-weight:800;color:var(--accent);text-decoration:none}
+    .brand .logo{width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;color:#fff;font-weight:900}
+    nav ul{display:flex;gap:.6rem;list-style:none;margin:0;padding:0}
+    nav a{padding:.45rem .6rem;border-radius:8px;color:var(--muted);text-decoration:none;font-weight:700}
+    nav a:hover{background:#fff0f0;color:var(--accent)}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center;padding:3.25rem 0}
+    .eyebrow{color:var(--accent);font-weight:800;font-size:.95rem}
+    h1{font-size:clamp(1.9rem,3.3vw,3rem);margin:.25rem 0;line-height:1.02}
+    .lead{color:var(--muted);font-size:1.05rem}
+    .cta{display:flex;gap:.6rem;margin-top:1.1rem}
+    .btn{border:0;cursor:pointer;padding:.7rem 1rem;border-radius:999px;font-weight:800}
+    .btn.primary{background:var(--accent);color:#fff}
+    .btn.ghost{background:transparent;border:2px solid var(--accent);color:var(--accent);padding:.5rem .9rem}
+
+    .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem}
+    .hours{display:grid;gap:.35rem}
+    .menu{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+    .menu .dish{padding:.8rem;border-radius:10px;background:linear-gradient(180deg,#fff,#fff);border:1px solid var(--border)}
+    .dish h4{margin:.05rem 0 .35rem 0}
+    .price{float:right;font-weight:800}
+
+    .section{padding:3rem 0}
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .gallery img{width:100%;height:150px;object-fit:cover;border-radius:8px}
+    .about-grid{display:grid;grid-template-columns:1fr 380px;gap:1rem;align-items:start}
+
+    footer{border-top:1px solid var(--border);padding:2rem 0;color:var(--muted)}
+
+    form{display:grid;gap:.6rem}
+    input,select,textarea{padding:.6rem;border-radius:8px;border:1px solid var(--border);width:100%}
+    label{font-weight:700;font-size:.92rem}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .menu{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .about-grid{grid-template-columns:1fr}
+      nav ul{display:none}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home">
+        <span class="logo">LM</span>
+        <span>LaMesa</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#reservations">Reservations</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="home">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Seasonal • Local • Cozy</div>
+        <h1>LaMesa · A modern bistro for good food & good company</h1>
+        <p class="lead">Chef-curated seasonal menu, handcrafted cocktails, and warm hospitality. Whether it's a date night or family dinner, we make every meal memorable.</p>
+        <div class="cta">
+          <a class="btn primary" href="#reservations">Book a Table</a>
+          <a class="btn ghost" href="#menu">See Menu</a>
+        </div>
+
+        <section style="margin-top:1.6rem">
+          <h3>Today's Specials</h3>
+          <div style="display:flex;gap:.6rem;margin-top:.6rem">
+            <div class="card" style="flex:1">
+              <strong>Smoked Salmon Carpaccio</strong>
+              <div style="color:var(--muted);font-size:.95rem">Lemon gel, capers, rye crumbs — ₹520</div>
+            </div>
+            <div class="card" style="width:230px">
+              <strong>Truffle Mac & Cheese</strong>
+              <div style="color:var(--muted);font-size:.95rem">Creamy, baked — ₹420</div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h4>Opening Hours</h4>
+          <div class="hours">
+            <div><strong>Mon–Fri:</strong> 12:00 — 15:30 · 18:30 — 23:00</div>
+            <div><strong>Sat–Sun:</strong> 11:00 — 23:30</div>
+            <div style="color:var(--muted);font-size:.95rem">Walk-ins welcome; reservations recommended for parties of 6+</div>
+          </div>
+          <hr style="margin:.8rem 0;border:none;border-top:1px solid var(--border)" />
+          <h4>Location</h4>
+          <p style="margin:.2rem 0 .6rem 0">32 Market Street, Downtown — near Central Park</p>
+          <a class="btn ghost" href="#contact">Get Directions</a>
+        </div>
+      </aside>
+    </section>
+
+    <section id="menu" class="section">
+      <h2>Menu</h2>
+      <p class="lead">A small, seasonal menu — thoughtfully sourced and carefully prepared.</p>
+      <div class="menu" role="list">
+        <div class="dish card" role="listitem">
+          <h4>Butternut Squash Soup <span class="price">₹220</span></h4>
+          <p style="color:var(--muted)">Toasted seeds, brown butter</p>
+        </div>
+        <div class="dish card" role="listitem">
+          <h4>Classic Caesar Salad <span class="price">₹260</span></h4>
+          <p style="color:var(--muted)">Parmesan, anchovy dressing, sourdough croutons</p>
+        </div>
+        <div class="dish card" role="listitem">
+          <h4>Charred Aubergine Steak <span class="price">₹380</span></h4>
+          <p style="color:var(--muted)">Miso glaze, sesame crumb</p>
+        </div>
+        <div class="dish card" role="listitem">
+          <h4>Pan-Seared Sea Bass <span class="price">₹620</span></h4>
+          <p style="color:var(--muted)">Coconut-citrus emulsion</p>
+        </div>
+        <div class="dish card" role="listitem">
+          <h4>Slow-Braised Lamb Shank <span class="price">₹760</span></h4>
+          <p style="color:var(--muted)">Herb jus, roasted roots</p>
+        </div>
+        <div class="dish card" role="listitem">
+          <h4>Chocolate Fondant <span class="price">₹240</span></h4>
+          <p style="color:var(--muted)">Salted caramel, vanilla cream</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="reservations" class="section">
+      <div class="about-grid">
+        <div>
+          <h2>Reservations</h2>
+          <p class="lead">Reserve your table quickly — we hold your booking for 15 minutes from the reserved time.</p>
+          <p style="color:var(--muted)">If you need to modify or cancel, please call us at +91 90000 00000.</p>
+        </div>
+        <div class="card">
+          <form id="resForm">
+            <label for="name">Full name</label>
+            <input id="name" name="name" required />
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" inputmode="tel" pattern="[0-9]{10}" placeholder="10-digit" required />
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem">
+              <div>
+                <label for="date">Date</label>
+                <input id="date" name="date" type="date" required />
+              </div>
+              <div>
+                <label for="time">Time</label>
+                <input id="time" name="time" type="time" required />
+              </div>
+            </div>
+            <label for="party">Party size</label>
+            <select id="party">
+              <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option>
+            </select>
+            <label for="notes">Notes (allergies, occasion)</label>
+            <textarea id="notes" rows="3"></textarea>
+            <button class="btn primary" type="submit">Request Reservation</button>
+            <p id="resMsg" role="status" aria-live="polite" style="font-weight:700;margin:0.5rem 0 0 0"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1541542684-0d59b1f9f4a6?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Dining room" />
+        <img src="https://images.unsplash.com/photo-1523986371872-9d3ba2e2f642?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Dish close-up" />
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Chef plating" />
+        <img src="https://images.unsplash.com/photo-1542444459-db8b9e3c3a07?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Cocktails" />
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div style="display:grid;grid-template-columns:1fr 360px;gap:1rem;align-items:start">
+        <div>
+          <p class="lead">Questions, private events, or catering inquiries — we'd love to hear from you.</p>
+          <ul style="color:var(--muted)">
+            <li><strong>Phone:</strong> +91 90000 00000</li>
+            <li><strong>Email:</strong> hello@lamesa.example</li>
+            <li><strong>Address:</strong> 32 Market Street, Downtown</li>
+          </ul>
+        </div>
+        <div class="card">
+          <form id="contactForm">
+            <label for="cname">Name</label>
+            <input id="cname" />
+            <label for="cemail">Email</label>
+            <input id="cemail" type="email" />
+            <label for="cmsg">Message</label>
+            <textarea id="cmsg" rows="4"></textarea>
+            <button class="btn primary" type="submit">Send Message</button>
+            <p id="cmsgStatus" role="status" aria-live="polite" style="font-weight:700;margin:0.5rem 0 0 0"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;flex-direction:column;gap:.6rem">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
+        <div><strong>LaMesa</strong> · Modern Bistro</div>
+        <div style="color:var(--muted)">© <span id="year"></span> LaMesa. All rights reserved.</div>
+      </div>
+      <div style="color:var(--muted);font-size:.95rem">Designed with care • Reservations: +91 90000 00000</div>
+    </div>
+  </footer>
+
+  <script>
+    // current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Demo form handlers — replace with real backend endpoints
+    function showMsg(el, text, ok=true){ el.style.color = ok ? '#0a8a3a' : '#c62828'; el.textContent = text; }
+
+    document.getElementById('resForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const msg = document.getElementById('resMsg');
+      showMsg(msg, '✅ Reservation request received. We will confirm by phone. (Demo)');
+      this.reset();
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const st = document.getElementById('cmsgStatus');
+      showMsg(st, '📨 Message sent. We will reply within 48 hours. (Demo)');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
